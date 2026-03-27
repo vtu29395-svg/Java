@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class Factorial {
+ public static void main(String[] args) {
+ Scanner sc = new Scanner(System.in);
+ System.out.print("Enter a number: ");
+ int num = sc.nextInt();
+ int fact = 1;
+ for (int i = 1; i <= num; i++) {
+ fact = fact * i;
+ }
+ System.out.println("Factorial of " + num + " is: " + fact);
+ }
+}
+NthFibonacci
+import java.util.Scanner;
+class NthFibonacci {
+ public static void main(String[] args) {
+ Scanner sc = new Scanner(System.in);
+ System.out.print("Enter value of N: ");
+ int n = sc.nextInt();
+ int a = 0, b = 1, c;
+ if (n == 1) {
+ System.out.println("Nth Fibonacci number is: " + a);
+ } else if (n == 2) {
+ System.out.println("Nth Fibonacci number is: " + b);
+ } else {
+ for (int i = 3; i <= n; i++) {
+ c = a + b;
+ a = b;
+ b = c;
+ }
+ System.out.println("Nth Fibonacci number is: " + b);
